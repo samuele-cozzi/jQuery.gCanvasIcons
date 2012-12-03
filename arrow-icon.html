@@ -1,0 +1,29 @@
+<head>
+	<script src="lib/jquery.js"></script>
+	<script src="lib/jQuery.gCanvasIconsArrow-0.0.2.js"></script>
+	<script src="lib/jQuery.gCanvasIconsAnimate-0.0.1.js"></script>
+	<script src="lib/jQuery.gCanvasIconsSearch-0.0.1.js"></script>
+	<script src="lib/jQuery.gCanvasIconsHome-0.0.1.js"></script>
+	<script src="lib/jQuery.gCanvasCartesianPlane-0.0.4.js"></script>
+	<script src="lib/jQuery.gCanvasIconsStructure-0.0.1.js"></script>
+</head>
+
+<body>
+  <div><canvas id="myCanvas" width="200" height="200"></canvas></div>
+  <div><canvas id="myCanvas1" width="200" height="200"></canvas></div>
+  <div><canvas id="myCanvas2" width="200" height="200"></canvas></div>
+  <div><canvas id="myCanvas3" width="200" height="200"></canvas></div>
+  <div><canvas id="myCanvas4" width="200" height="200"></canvas></div>
+  <script>
+	  $(document).ready(function(){
+		
+		$('#myCanvas').gIconCartesianPlane().gIconArrow({arrowRotation: Math.PI, lineWidth: 2})
+			.gIconAnimateCircle({lineWidth: 2});			
+		$('#myCanvas1').gIconHome({lineWidth: 2}).gIconAnimateCircle({lineWidth: 2});
+		$('#myCanvas2').gIconArrow({lineWidth: 2}).gIconAnimateCircle({lineWidth: 2})
+			.gIconStructure({type: 'arrow'});
+		$('#myCanvas3').gIconSearch({lineWidth: 2}).gIconAnimateCircle({lineWidth: 2});
+	
+	  });
+  </script>
+</body>
